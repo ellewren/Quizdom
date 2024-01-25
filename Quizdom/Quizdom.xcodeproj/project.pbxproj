@@ -41,6 +41,9 @@
 		E60E4BAE2B61A52100418602 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E60E4BAD2B61A52100418602 /* FirebaseRemoteConfigSwift */; };
 		E60E4BB02B61A52100418602 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E60E4BAF2B61A52100418602 /* FirebaseStorage */; };
 		E60E4BB22B61A52100418602 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E60E4BB12B61A52100418602 /* FirebaseStorageCombine-Community */; };
+		E6BA579C2B61DD3B009335CA /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */; };
+		E6BA579F2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */; };
+		E6BA57A12B61E46F009335CA /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +53,12 @@
 		E60E4B6B2B5F35EE00418602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E60E4B6E2B5F35EE00418602 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E60E4B752B604E4B00418602 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MoiraiOne-Regular.ttf"; path = "font/MoiraiOne-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MoiraiOne-Regular.ttf"; path = "Quizdom/Fonts/MoiraiOne-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		E60E4B792B60556400418602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E60E4B7A2B619F4B00418602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Monoton-Regular.ttf"; path = "Quizdom/Fonts/Monoton-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +118,10 @@
 		E60E4B662B5F35ED00418602 /* Quizdom */ = {
 			isa = PBXGroup;
 			children = (
+				E6BA579D2B61DE25009335CA /* Fonts */,
 				E60E4B792B60556400418602 /* Info.plist */,
 				E60E4B752B604E4B00418602 /* LoginView.swift */,
 				E60E4B672B5F35ED00418602 /* QuizdomApp.swift */,
-				E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */,
 				E60E4B7A2B619F4B00418602 /* GoogleService-Info.plist */,
 				E60E4B692B5F35ED00418602 /* ContentView.swift */,
 				E60E4B6B2B5F35EE00418602 /* Assets.xcassets */,
@@ -130,6 +136,17 @@
 				E60E4B6E2B5F35EE00418602 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6BA579D2B61DE25009335CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */,
+				E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */,
+				E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */,
+				E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E60E4B782B60553200418602 /* MoiraiOne-Regular.ttf in Resources */,
+				E6BA579C2B61DD3B009335CA /* Monoton-Regular.ttf in Resources */,
 				E60E4B6F2B5F35EE00418602 /* Preview Assets.xcassets in Resources */,
+				E6BA57A12B61E46F009335CA /* Comfortaa-Regular.ttf in Resources */,
 				E60E4B7B2B619F4B00418602 /* GoogleService-Info.plist in Resources */,
+				E6BA579F2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf in Resources */,
 				E60E4B6C2B5F35EE00418602 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

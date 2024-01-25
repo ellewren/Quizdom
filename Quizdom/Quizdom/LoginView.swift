@@ -17,7 +17,7 @@ struct LoginView: View {
         VStack {
             Image("mediumLogo")
             Text("Quizdom")
-                .font(.custom("MoiraiOne-Regular", size: 60))
+                .font(.custom("Monoton-Regular", size: 50))
             Text("Your daily dose of knowledge")
                 .monospaced()
                 .italic()
@@ -63,7 +63,7 @@ struct LoginView: View {
             Button {
                 print("tapped")
             } label: {
-                Text("Forgot Password")
+                Text("Forgot Password?")
                     .italic()
                     .tint(.gray)
             }

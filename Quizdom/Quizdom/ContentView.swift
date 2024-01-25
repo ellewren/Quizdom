@@ -14,39 +14,38 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
             Text("Quizdom")
-                .font(.custom("MoiraiOne-Regular", size: 60))
+                .font(.custom("Comfortaa-Regular", size: 50))
             Spacer()
             
-                .padding()
-            
+
+    
             VStack {
                 Text("Choose your category:")
+                    
                     .font(.title2)
                     .monospaced()
-                Button {
-                    print("tapped")
-                } label: {
+                Button () {
+                        
+                } 
+            label: {
                     Text("Idioms")
                         .foregroundStyle(.white)
                         .monospaced()
                         .frame(width: 150, height: 50)
-                        .background(LinearGradient(colors: [.blue, .green], startPoint: .leading, endPoint: .trailing))
-                        .border(Color.blue)
-                        .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 50, topTrailing: 50)))
                         
                 }
+            .font(.custom("Comfortaa-Regular", size: 20))
                 .padding()
                 
+         
                 Button {
                     print("tapped")
                 } label: {
                     Text("History")
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.black)
                         .monospaced()
                         .frame(width: 150, height: 50)
-                        .background(LinearGradient(colors: [.pink, .purple], startPoint: .leading, endPoint: .trailing))
-                        .border(Color.blue)
-                        .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 50, topTrailing: 50)))
+
                 }
                 .padding()
                 
@@ -55,12 +54,10 @@ struct ContentView: View {
                 } label: {
                     Text("Grammar")
                         .fontWeight(.bold)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.black)
                         .monospaced()
                         .frame(width: 150, height: 50)
-                        .background(LinearGradient(colors: [.orange, .red], startPoint: .leading, endPoint: .trailing))
-                        .border(Color.red)
-                        .clipShape(Capsule())
+                        
                 }
                 .padding()
                 
@@ -69,12 +66,10 @@ struct ContentView: View {
                 } label: {
                     Text("Word Problems")
                         .fontWeight(.bold)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.black)
                         .monospaced()
                         .frame(width: 150, height: 50)
-                        .background(LinearGradient(colors: [.yellow, .green], startPoint: .leading, endPoint: .trailing))
-                        .border(Color.green)
-                        .clipShape(UnevenRoundedRectangle(cornerRadii: .init(topLeading: 50, topTrailing: 50)))
+                      
                         
                 }
                 .padding()
