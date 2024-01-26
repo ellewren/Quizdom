@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E60E4B682B5F35ED00418602 /* QuizdomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E4B672B5F35ED00418602 /* QuizdomApp.swift */; };
-		E60E4B6A2B5F35ED00418602 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E4B692B5F35ED00418602 /* ContentView.swift */; };
+		E60E4B6A2B5F35ED00418602 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E4B692B5F35ED00418602 /* CategoryView.swift */; };
 		E60E4B6C2B5F35EE00418602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E60E4B6B2B5F35EE00418602 /* Assets.xcassets */; };
 		E60E4B6F2B5F35EE00418602 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E60E4B6E2B5F35EE00418602 /* Preview Assets.xcassets */; };
 		E60E4B762B604E4B00418602 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E4B752B604E4B00418602 /* LoginView.swift */; };
@@ -44,12 +44,14 @@
 		E6BA579C2B61DD3B009335CA /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */; };
 		E6BA579F2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */; };
 		E6BA57A12B61E46F009335CA /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */; };
+		E6BA57A32B63438B009335CA /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA57A22B63438B009335CA /* AccountView.swift */; };
+		E6BA57A52B642EE3009335CA /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA57A42B642EE3009335CA /* QuizView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E60E4B642B5F35ED00418602 /* Quizdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E4B672B5F35ED00418602 /* QuizdomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizdomApp.swift; sourceTree = "<group>"; };
-		E60E4B692B5F35ED00418602 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E60E4B692B5F35ED00418602 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		E60E4B6B2B5F35EE00418602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E60E4B6E2B5F35EE00418602 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E60E4B752B604E4B00418602 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Monoton-Regular.ttf"; path = "Quizdom/Fonts/Monoton-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		E6BA57A22B63438B009335CA /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		E6BA57A42B642EE3009335CA /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +127,11 @@
 				E60E4B752B604E4B00418602 /* LoginView.swift */,
 				E60E4B672B5F35ED00418602 /* QuizdomApp.swift */,
 				E60E4B7A2B619F4B00418602 /* GoogleService-Info.plist */,
-				E60E4B692B5F35ED00418602 /* ContentView.swift */,
+				E60E4B692B5F35ED00418602 /* CategoryView.swift */,
 				E60E4B6B2B5F35EE00418602 /* Assets.xcassets */,
 				E60E4B6D2B5F35EE00418602 /* Preview Content */,
+				E6BA57A22B63438B009335CA /* AccountView.swift */,
+				E6BA57A42B642EE3009335CA /* QuizView.swift */,
 			);
 			path = Quizdom;
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BA57A32B63438B009335CA /* AccountView.swift in Sources */,
 				E60E4B762B604E4B00418602 /* LoginView.swift in Sources */,
-				E60E4B6A2B5F35ED00418602 /* ContentView.swift in Sources */,
+				E6BA57A52B642EE3009335CA /* QuizView.swift in Sources */,
+				E60E4B6A2B5F35ED00418602 /* CategoryView.swift in Sources */,
 				E60E4B682B5F35ED00418602 /* QuizdomApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

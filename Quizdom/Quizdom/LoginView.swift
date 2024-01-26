@@ -15,9 +15,9 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-            Image("mediumLogo")
+            Image("smallBrain")
             Text("Quizdom")
-                .font(.custom("Monoton-Regular", size: 50))
+                .font(.custom("Monoton", size: 50))
             Text("Your daily dose of knowledge")
                 .monospaced()
                 .italic()

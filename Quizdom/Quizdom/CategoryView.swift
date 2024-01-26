@@ -10,78 +10,92 @@ import SwiftUI
 struct CategoryView: View {
     var body: some View {
         VStack {
-            Image("mediumLogo")
+            Image("smallBrain")
                 .resizable()
                 .frame(width: 100, height: 100)
             Text("Quizdom")
-                .font(.custom("Comfortaa-Regular", size: 50))
+                .font(.custom("MoiraiOne-Regular", size: 50))
+            Text("Your daily dose of knowledge")
+                .font(.custom("Comfortaa-Regular", size: 15))
+                .padding(.bottom, 20)
+            
             Spacer()
             
 
     
             VStack {
                 Text("Choose your category:")
+                    .font(.custom("Comfortaa-Regular", size: 25))
+                
+                    .padding(.bottom, 50)
+                
+                HStack {
                     
-                    .font(.title2)
-                    .monospaced()
-                Button () {
+                    Button(action: testButton) {
+                        Label("Idioms", systemImage: "person.wave.2")
+                            .padding()
+                            .frame(width: 150, height: 175)
+                            .foregroundColor(.white)
+                            .background(Color.cyan)
+                            .cornerRadius(10)
+                            .padding()
                         
-                } 
-            label: {
-                    Text("Idioms")
-                        .foregroundStyle(.white)
-                        .monospaced()
-                        .frame(width: 150, height: 50)
+                    }
+                    
+                    
+                    Button(action: testButton) {
+                        Label("Geogrpahy", systemImage: "globe.europe.africa")
+                            .padding()
+                            .frame(width: 150, height: 175)
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                            .padding()
                         
+                    }
                 }
-            .font(.custom("Comfortaa-Regular", size: 20))
-                .padding()
                 
-         
-                Button {
-                    print("tapped")
-                } label: {
-                    Text("History")
-                        .foregroundStyle(.black)
-                        .monospaced()
-                        .frame(width: 150, height: 50)
-
-                }
-                .padding()
-                
-                Button {
-                    print("tapped")
-                } label: {
-                    Text("Grammar")
-                        .fontWeight(.bold)
-                        .foregroundStyle(.black)
-                        .monospaced()
-                        .frame(width: 150, height: 50)
+                HStack {
+                    
+                    Button(action: testButton) {
+                        Label("Grammar", systemImage: "text.word.spacing")
+                            .padding()
+                            .frame(width: 150, height: 175)
+                            .foregroundColor(.white)
+                            .background(Color.orange)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                    
+                    
+                    Button(action: testButton) {
+                        Label("Science", systemImage: "testtube.2")
+                            .padding()
+                            .frame(width: 150, height: 175)
+                            .foregroundColor(.white)
+                            .background(Color.red)
+                            .cornerRadius(10)
+                            .padding()
                         
+                    }
                 }
-                .padding()
-                
-                Button {
-                    print("tapped")
-                } label: {
-                    Text("Word Problems")
-                        .fontWeight(.bold)
-                        .foregroundStyle(.black)
-                        .monospaced()
-                        .frame(width: 150, height: 50)
-                      
-                        
-                }
-                .padding()
+               
                 
             }
-            Spacer()
+          Spacer()
         }
         Spacer()
-        .padding()
+            .padding()
+        
+        
+        
         
         
     }
+}
+
+func testButton () {
+    print("This is a test")
 }
 
 #Preview {
