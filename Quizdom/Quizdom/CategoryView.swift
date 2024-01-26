@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CategoryView: View {
     var body: some View {
         VStack {
             Image("mediumLogo")
@@ -85,5 +85,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    CategoryView()
 }
