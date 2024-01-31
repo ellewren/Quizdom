@@ -9,11 +9,7 @@ import SwiftUI
 import Firebase
 
 struct RegisterView: View {
-    
-    @State var userName = ""
-    @State var email = ""
-    @State var password = ""
-    @State var birthdate = Date()
+    @StateObject var viewModel = RegisterViewModel()
     
     
     var body: some View {
@@ -27,18 +23,20 @@ struct RegisterView: View {
                     Text("Welcome to Quizdom")
                         .font(.custom("Comfortaa-Regular", size: 20))
                     Form {
-                        TextField("Username", text: $userName)
-                        TextField("Email", text: $email)
-                        SecureField("Password", text: $password)
-                        DatePicker("Birthdate", selection: $birthdate,in: ...Date(), displayedComponents:.date)
+                        TextField("Username", text: $viewModel.userName)
+                            .autocorrectionDisabled()
+                        TextField("Email", text: $viewModel.email)
+                            .autocorrectionDisabled()
+                            .autocapitalization(.none)
+                        SecureField("Password", text: $viewModel.password)
+                        DatePicker("Birthdate", selection: $viewModel.birthdate,in: ...Date(), displayedComponents:.date)
                         
                     }
                     .foregroundStyle(Color.gray)
                     .scrollContentBackground(.hidden)
                     
-                    Button(action: {
-                        
-                    }, label: {
+                    Button(action: { viewModel.register() },
+                           label: {
                         Text("Sign Up")
                     })
                     .frame(width: 120, height: 50)

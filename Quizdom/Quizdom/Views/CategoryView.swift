@@ -76,9 +76,13 @@ struct CategoryView: View {
                                     .padding()
                                 
                             }
+                            
                         }
                         
+                    
+                        
                     }
+                    Spacer()
                     
                 }
                 .navigationDestination(isPresented: $showQuizView) {

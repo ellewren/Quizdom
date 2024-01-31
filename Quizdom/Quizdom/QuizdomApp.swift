@@ -17,7 +17,7 @@ struct QuizdomApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CategoryView()
+            MainView()
         }
     }
 }
