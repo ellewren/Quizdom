@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct AccountView: View {
+    
+    @State private var showCategoryView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                Button (action: { showCategoryView = true} ) {
+                    Text("Go to Daily Quizes")
+                }
+                
+                }
+            .navigationDestination(isPresented: $showCategoryView) {
+                CategoryView()
+            }
+        
+//                .navigationBarBackButtonHidden(true)
+        }
     }
 }
 
