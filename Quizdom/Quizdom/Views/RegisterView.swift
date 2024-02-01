@@ -34,7 +34,6 @@ struct RegisterView: View {
                     }
                     .foregroundStyle(Color.gray)
                     .scrollContentBackground(.hidden)
-                    
                     Button(action: { viewModel.register() },
                            label: {
                         Text("Sign Up")
@@ -44,7 +43,8 @@ struct RegisterView: View {
                     .foregroundColor(.white)
                     .clipShape(Capsule())
                     .monospaced()
-                    
+                    Spacer(minLength: 300)
+
                     
                 }
                 .padding(.bottom)
