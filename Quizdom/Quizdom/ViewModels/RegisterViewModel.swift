@@ -11,9 +11,9 @@ import FirebaseFirestore
 
 class RegisterViewModel: ObservableObject {
     
-    @Published var userName = ""
-    @Published var email = ""
-    @Published var password = ""
+    @Published var userName = String()
+    @Published var email = String()
+    @Published var password = String()
     @Published var birthdate = Date()
     
     init () {}
