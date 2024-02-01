@@ -34,7 +34,7 @@ struct CategoryView: View {
                         VStack {
                             
                             Button(action: { showQuizView = true } ) {
-                                Label("Idioms", systemImage: "person.wave.2")
+                                Label("Math", systemImage: "minus.forwardslash.plus")
                                     .frame(width: 300, height: 80)
                                     .foregroundColor(.white)
                                     .background(Color.cyan)
@@ -58,7 +58,7 @@ struct CategoryView: View {
                             
                             
                             Button (action: { showQuizView = true } ) {
-                                Label("Grammar", systemImage: "text.word.spacing")
+                                Label("History", systemImage: "book.closed")
                                     .frame(width: 300, height: 80)
                                     .foregroundColor(.white)
                                     .background(Color.orange)
