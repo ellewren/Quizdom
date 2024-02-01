@@ -31,8 +31,7 @@ struct LoginView: View {
                             .padding(.bottom, 80)
                         
                     }
-                    Spacer()
-                        
+                    
                         List {
                             TextField("Username", text: $username)
                                 .listRowBackground(Color("Color"))
@@ -40,7 +39,6 @@ struct LoginView: View {
                                 .listRowBackground(Color("Color"))
                         }
                         .listStyle(.plain)
-                        .padding()
                         
                     
                 
@@ -85,7 +83,7 @@ struct LoginView: View {
                                     .tint(.gray)
                             }
                         }
-                        Spacer()
+                        Spacer(minLength:250)
                     }
                     
                 }
