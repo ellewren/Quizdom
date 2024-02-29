@@ -13,14 +13,22 @@ struct GeographyQuizView: View {
     
     @State private var questionTimer = 30
     
+    @State private var quiz: [Questions] = []
+    
+    @State private var quizQuestion = ""
+    @State private var quizAnswerOne = ""
+    @State private var quizAnswerTwo = ""
+    @State private var quizAnswerThree = ""
+    @State private var quizAnswerFour = ""
+    
+    @State private var quizAnswer = ""
+    
+    @StateObject private var networkManager = NetworkManager.shared
+    
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    @State private var question: [Questions] = []
     
-    @State private var quizQuestion = ""
-    
-    @StateObject private var networkManager = NetworkManager.shared
     
     var body: some View {
         VStack {
@@ -51,7 +59,7 @@ struct GeographyQuizView: View {
                 
             }
             .onAppear {
-                getQuizQuestion()
+                getQuiz()
             }
             
             Spacer()
@@ -59,7 +67,7 @@ struct GeographyQuizView: View {
             VStack {
                 
                 Button(action: testButton) {
-                    Text("This is the wrong answer. How long can th e answer be here?")
+                    Text("\(quizAnswerOne)")
                         .padding()
                         .multilineTextAlignment(.leading)
                         .frame(width: 300, height: 80)
@@ -72,7 +80,7 @@ struct GeographyQuizView: View {
                 
                 
                 Button(action: testButton) {
-                    Text("This is the wrong answer.")
+                    Text("\(quizAnswerTwo)")
                         .multilineTextAlignment(.leading)
                         .frame(width: 300, height: 80)
                         .foregroundColor(.white)
@@ -85,7 +93,7 @@ struct GeographyQuizView: View {
             
             
             Button(action: testButton) {
-                Text("This is the right answer.")
+                Text("\(quizAnswerThree)")
                     .multilineTextAlignment(.leading)
                     .frame(width: 300, height: 80)
                     .foregroundColor(.white)
@@ -97,7 +105,7 @@ struct GeographyQuizView: View {
             
             
             Button(action: testButton) {
-                Text("This is the wrong answer.")
+                Text("\(quizAnswerFour)")
                     .multilineTextAlignment(.leading)
                     .frame(width: 300, height: 80)
                     .foregroundColor(.white)
@@ -116,7 +124,7 @@ struct GeographyQuizView: View {
         
     }
     
-    func getQuizQuestion() {
+    func getQuiz() {
         NetworkManager.shared.getGeographyQuiz { result in
             DispatchQueue.main.async {
                 switch result {
