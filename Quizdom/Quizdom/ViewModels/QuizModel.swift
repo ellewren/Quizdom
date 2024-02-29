@@ -7,13 +7,23 @@
 
 import Foundation
 
-struct Quiz: Decodable {
-    let text: String
-    let answers: [String]
-    let rightAnswer: String
-    
+struct Questions: Decodable {
+    let question: String
+    let correctAnswer: String
+    let incorrectAnswers: [String]
+
+    enum CodingKeys: String, CodingKey {
+        case question = "question"
+        case correctAnswer = "correct_answer"
+        case incorrectAnswers = "incorrect_answers"
+    }
 }
 
+
 struct QuizResponse: Decodable {
-    let request: Quiz
+    let results: [Questions]
 }
+
+
+
+

@@ -7,7 +7,9 @@
 
 import Foundation
 
-final class NetworkManager {
+
+
+final class NetworkManager: ObservableObject {
     
     static let shared = NetworkManager()
     
@@ -18,58 +20,141 @@ final class NetworkManager {
     
     private init() {}
     
-    func getScienceQuiz(completed: @escaping (Result<Quiz, QuizError>) -> Void) {
+    func getScienceQuiz(completed: @escaping (Result<[Questions], QuizError>) -> Void) {
         guard let url = URL(string: scienceURL) else {
+            completed(.failure(.invalidURL))
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            if let _ = error {
+                completed(.failure(.unableToComplete))
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+
+            guard let data = data else {
+                completed(.failure(.invalidData))
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(QuizResponse.self, from: data)
+                completed(.success(decodedResponse.results))
+            } catch {
+                completed(.failure(.invalidData))
+            }
+        }
+
+        task.resume()
+    }
+
+    
+    func getGeographyQuiz(completed: @escaping (Result<[Questions], QuizError>) -> Void) {
+        guard let url = URL(string: geographyURL) else {
             completed(.failure(.invalidURL))
             return
         }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            guard let _ = error else {
+            if let _ = error {
                 completed(.failure(.unableToComplete))
                 return
             }
-            
+
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 completed(.failure(.invalidResponse))
                 return
             }
-            
+
             guard let data = data else {
                 completed(.failure(.invalidData))
                 return
             }
-            
+
             do {
                 let decoder = JSONDecoder()
-                let decodedResponse =  try decoder.decode(QuizResponse.self, from: data)
-                completed(.success(decodedResponse.request))
+                let decodedResponse = try decoder.decode(QuizResponse.self, from: data)
+                completed(.success(decodedResponse.results))
             } catch {
                 completed(.failure(.invalidData))
             }
-            
         }
+
+        task.resume()
     }
     
-    func getGeographyQuiz(completed: @escaping (Result<Quiz, QuizError>) -> Void) {
-        guard let url = URL(string: geographyURL) else {
-            completed(.failure(.invalidURL))
-            return
-        }
-    }
-    
-    func getHistoryeQuiz(completed: @escaping (Result<Quiz, QuizError>) -> Void) {
+    func getHistoryeQuiz(completed: @escaping (Result<[Questions], QuizError>) -> Void) {
         guard let url = URL(string: historyURL) else {
             completed(.failure(.invalidURL))
             return
         }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            if let _ = error {
+                completed(.failure(.unableToComplete))
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+
+            guard let data = data else {
+                completed(.failure(.invalidData))
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(QuizResponse.self, from: data)
+                completed(.success(decodedResponse.results))
+            } catch {
+                completed(.failure(.invalidData))
+            }
+        }
+
+        task.resume()
     }
     
-    func getMathQuiz(completed: @escaping (Result<Quiz, QuizError>) -> Void) {
+    func getMathQuiz(completed: @escaping (Result<[Questions], QuizError>) -> Void) {
         guard let url = URL(string: mathURL) else {
             completed(.failure(.invalidURL))
             return
         }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            if let _ = error {
+                completed(.failure(.unableToComplete))
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.invalidResponse))
+                return
+            }
+
+            guard let data = data else {
+                completed(.failure(.invalidData))
+                return
+            }
+
+            do {
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(QuizResponse.self, from: data)
+                completed(.success(decodedResponse.results))
+            } catch {
+                completed(.failure(.invalidData))
+            }
+        }
+
+        task.resume()
     }
     
 }

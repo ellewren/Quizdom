@@ -14,9 +14,12 @@
 		E60E4B762B604E4B00418602 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60E4B752B604E4B00418602 /* LoginView.swift */; };
 		E60E4B782B60553200418602 /* MoiraiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */; };
 		E60E4B7B2B619F4B00418602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E60E4B7A2B619F4B00418602 /* GoogleService-Info.plist */; };
-		E6560EDA2B6B1D3E00346BE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560ED92B6B1D3E00346BE3 /* NetworkManager.swift */; };
 		E6560EDC2B6B2CDA00346BE3 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EDB2B6B2CDA00346BE3 /* QuizModel.swift */; };
-		E6560EE12B6B2E6600346BE3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EE02B6B2E6600346BE3 /* Errors.swift */; };
+		E6560EE32B74709200346BE3 /* Grades.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EE22B74709200346BE3 /* Grades.swift */; };
+		E6560EE52B7FD6E800346BE3 /* GeographyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EE42B7FD6E800346BE3 /* GeographyQuizView.swift */; };
+		E6560EEF2B8FEFDD00346BE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EEE2B8FEFDD00346BE3 /* NetworkManager.swift */; };
+		E6560EF12B8FF50D00346BE3 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EF02B8FF50D00346BE3 /* Errors.swift */; };
+		E6560EF32B90145700346BE3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6560EF22B90145700346BE3 /* Networking.swift */; };
 		E6BA579C2B61DD3B009335CA /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */; };
 		E6BA579F2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */; };
 		E6BA57A12B61E46F009335CA /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */; };
@@ -67,9 +70,12 @@
 		E60E4B772B60553200418602 /* MoiraiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MoiraiOne-Regular.ttf"; path = "Quizdom/Fonts/MoiraiOne-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		E60E4B792B60556400418602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E60E4B7A2B619F4B00418602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E6560ED92B6B1D3E00346BE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E6560EDB2B6B2CDA00346BE3 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
-		E6560EE02B6B2E6600346BE3 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		E6560EE22B74709200346BE3 /* Grades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grades.swift; sourceTree = "<group>"; };
+		E6560EE42B7FD6E800346BE3 /* GeographyQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographyQuizView.swift; sourceTree = "<group>"; };
+		E6560EEE2B8FEFDD00346BE3 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E6560EF02B8FF50D00346BE3 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		E6560EF22B90145700346BE3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		E6BA579B2B61DD3B009335CA /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Monoton-Regular.ttf"; path = "Quizdom/Fonts/Monoton-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		E6BA579E2B61E2F0009335CA /* Comfortaa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E6BA57A02B61E46F009335CA /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
@@ -140,7 +146,7 @@
 		E60E4B662B5F35ED00418602 /* Quizdom */ = {
 			isa = PBXGroup;
 			children = (
-				E6560EDF2B6B2E3000346BE3 /* Networking */,
+				E6560EEB2B8FEFCC00346BE3 /* Networking */,
 				E6BA57E72B6B04F2009335CA /* Views */,
 				E6BA57E62B6B04BA009335CA /* Models */,
 				E6BA57E52B6B0479009335CA /* ViewModels */,
@@ -162,11 +168,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E6560EDF2B6B2E3000346BE3 /* Networking */ = {
+		E6560EEB2B8FEFCC00346BE3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E6560ED92B6B1D3E00346BE3 /* NetworkManager.swift */,
-				E6560EE02B6B2E6600346BE3 /* Errors.swift */,
+				E6560EEE2B8FEFDD00346BE3 /* NetworkManager.swift */,
+				E6560EF02B8FF50D00346BE3 /* Errors.swift */,
+				E6560EF22B90145700346BE3 /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 				E6BA57BF2B6AD87C009335CA /* RegisterViewModel.swift */,
 				E6BA57EC2B6B0613009335CA /* MainViewViewModel.swift */,
 				E6560EDB2B6B2CDA00346BE3 /* QuizModel.swift */,
+				E6560EE22B74709200346BE3 /* Grades.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 				E60E4B692B5F35ED00418602 /* CategoryView.swift */,
 				E6BA57A42B642EE3009335CA /* QuizView.swift */,
 				E6BA57EA2B6B0588009335CA /* MainView.swift */,
+				E6560EE42B7FD6E800346BE3 /* GeographyQuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,17 +330,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6560EDA2B6B1D3E00346BE3 /* NetworkManager.swift in Sources */,
 				E6BA57A32B63438B009335CA /* AccountView.swift in Sources */,
 				E6BA57E42B6B0061009335CA /* Extensions.swift in Sources */,
+				E6560EF32B90145700346BE3 /* Networking.swift in Sources */,
 				E6BA57ED2B6B0613009335CA /* MainViewViewModel.swift in Sources */,
 				E60E4B762B604E4B00418602 /* LoginView.swift in Sources */,
+				E6560EEF2B8FEFDD00346BE3 /* NetworkManager.swift in Sources */,
 				E6BA57EB2B6B0588009335CA /* MainView.swift in Sources */,
-				E6560EE12B6B2E6600346BE3 /* Errors.swift in Sources */,
 				E6BA57C02B6AD87C009335CA /* RegisterViewModel.swift in Sources */,
 				E6560EDC2B6B2CDA00346BE3 /* QuizModel.swift in Sources */,
 				E6BA57A52B642EE3009335CA /* QuizView.swift in Sources */,
+				E6560EE32B74709200346BE3 /* Grades.swift in Sources */,
 				E6BA57C22B6ADE7D009335CA /* User.swift in Sources */,
+				E6560EE52B7FD6E800346BE3 /* GeographyQuizView.swift in Sources */,
+				E6560EF12B8FF50D00346BE3 /* Errors.swift in Sources */,
 				E6BA57BE2B69CB97009335CA /* RegisterView.swift in Sources */,
 				E60E4B6A2B5F35ED00418602 /* CategoryView.swift in Sources */,
 				E60E4B682B5F35ED00418602 /* QuizdomApp.swift in Sources */,
